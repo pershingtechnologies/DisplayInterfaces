@@ -1,0 +1,14 @@
+C:\Users\chris\source\repos\DisplayInterfaces\DisplayInterfaces\bin\Debug\DisplayInterfaces.dll
+C:\Users\chris\source\repos\DisplayInterfaces\DisplayInterfaces\bin\Debug\DisplayInterfaces.pdb
+C:\Users\chris\source\repos\DisplayInterfaces\DisplayInterfaces\bin\Debug\NetworkUtilities.dll
+C:\Users\chris\source\repos\DisplayInterfaces\DisplayInterfaces\bin\Debug\SimplSharpHelperInterface.dll
+C:\Users\chris\source\repos\DisplayInterfaces\DisplayInterfaces\bin\Debug\SimplSharpCustomAttributesInterface.dll
+C:\Users\chris\source\repos\DisplayInterfaces\DisplayInterfaces\bin\Debug\NetworkUtilities.pdb
+C:\Users\chris\source\repos\DisplayInterfaces\DisplayInterfaces\bin\Debug\NetworkUtilities.dll.config
+C:\Users\chris\source\repos\DisplayInterfaces\DisplayInterfaces\bin\Debug\SimplSharpHelperInterface.xml
+C:\Users\chris\source\repos\DisplayInterfaces\DisplayInterfaces\bin\Debug\SimplSharpCustomAttributesInterface.xml
+C:\Users\chris\source\repos\DisplayInterfaces\DisplayInterfaces\obj\Debug\DisplayInterfaces.csprojAssemblyReference.cache
+C:\Users\chris\source\repos\DisplayInterfaces\DisplayInterfaces\obj\Debug\DisplayInterfaces.csproj.CoreCompileInputs.cache
+C:\Users\chris\source\repos\DisplayInterfaces\DisplayInterfaces\obj\Debug\DisplayInterfaces.csproj.CopyComplete
+C:\Users\chris\source\repos\DisplayInterfaces\DisplayInterfaces\obj\Debug\DisplayInterfaces.dll
+C:\Users\chris\source\repos\DisplayInterfaces\DisplayInterfaces\obj\Debug\DisplayInterfaces.pdb
