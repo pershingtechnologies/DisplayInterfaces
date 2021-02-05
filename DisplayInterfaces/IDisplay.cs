@@ -37,6 +37,5 @@ namespace DisplayInterfaces
         //TCP Client related objects
         string IpAddress { get; set; }
         void Connect();
-
     }
 }
