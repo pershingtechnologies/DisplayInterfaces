@@ -49,6 +49,8 @@ namespace DisplayInterfaces
         public event EventHandler<VolumeEventArgs> VolumeChanged;
         public event EventHandler<InputEventArgs> InputChanged;
         public event EventHandler<QuadViewEventArgs> QuadViewChanged;
+        public event EventHandler Connected;
+        public event EventHandler Disconnected;
 
         //tcpClient properties/methods
         private string _ipAddress;
@@ -128,10 +130,10 @@ namespace DisplayInterfaces
         }
 
         //constructor
-        public PlanarUltraRes()
-        {
-            SupportsQuad = true;
-        }
+        //public PlanarUltraRes()
+        //{
+        //    SupportsQuad = true;
+        //}
         public PlanarUltraRes(string ipAddress)
         {
             //this type of display does support quad-view
@@ -140,9 +142,21 @@ namespace DisplayInterfaces
             //initialize tcpClient
             //Planar displays use port 57 for control
             //register tcpClient events
-            IpAddress = ipAddress;
             tcpClient = new PtTcpClient(ipAddress, 57);
             tcpClient.DataReceived += TcpClient_DataReceived;
+            tcpClient.Connected += TcpClient_Connected;
+            tcpClient.Disconnected += TcpClient_Disconnected;
+            IpAddress = ipAddress;
+        }
+
+        //pass events from TCP client up to consumer class
+        private void TcpClient_Disconnected(object sender, EventArgs e)
+        {
+            Disconnected?.Invoke(this, e);
+        }
+        private void TcpClient_Connected(object sender, EventArgs e)
+        {
+            Connected?.Invoke(this, e);
         }
 
         //fields & methods not included in interface
