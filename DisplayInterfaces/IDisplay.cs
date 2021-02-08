@@ -21,6 +21,8 @@ namespace DisplayInterfaces
         event EventHandler<VolumeEventArgs> VolumeChanged;
         event EventHandler<InputEventArgs> InputChanged;
         event EventHandler<QuadViewEventArgs> QuadViewChanged;
+        event EventHandler Connected;
+        event EventHandler Disconnected;
 
         //TCP Client related objects
         string IpAddress { get; set; }
