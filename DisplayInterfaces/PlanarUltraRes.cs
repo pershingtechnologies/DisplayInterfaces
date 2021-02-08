@@ -13,11 +13,6 @@ namespace DisplayInterfaces
             get { return _power; }
             set { SetPower(value); }
         }
-        public ushort uPower
-        {
-            get { return _power ? (ushort)1 : (ushort)0; }
-            set { SetPower(value > 0); } 
-        }
 
         //volume commands
         private ushort _volume;
@@ -38,34 +33,15 @@ namespace DisplayInterfaces
             get { return _input; }
             set { SetInput(value); }
         }
-        public ushort uInput
-        {
-            get { return (ushort)_input; }
-            set
-            {
-                bool Exists = Enum.IsDefined(typeof(eDisplayInput), value);
-                if (Exists) { SetInput((eDisplayInput)value); }
-                else { throw new NotSupportedException("Display input value out of range"); }
-            }
-        }
 
         //quadview commands
         public bool SupportsQuad { get; private set; }
-        public ushort uSupportsQuad
-        {
-            get { return SupportsQuad ? (ushort)1 : (ushort)0; }
-        }
 
         private bool _quadDisplay;
         public bool QuadDisplay
         {
             get { return _quadDisplay; }
             set { SetQuadview(value); }
-        }
-        public ushort uQuadDisplay
-        {
-            get { return _quadDisplay ? (ushort)1 : (ushort)0; }
-            set { SetQuadview(value > 0); }
         }
 
         //events get triggered by true feedback parsed from device responses
@@ -152,6 +128,10 @@ namespace DisplayInterfaces
         }
 
         //constructor
+        public PlanarUltraRes()
+        {
+            SupportsQuad = true;
+        }
         public PlanarUltraRes(string ipAddress)
         {
             //this type of display does support quad-view
@@ -180,6 +160,7 @@ namespace DisplayInterfaces
             ushort uPercentage = (ushort)Math.Floor(percentage);
             return uPercentage;
         }
+        
         private void SetInput(eDisplayInput input)
         {
             string sInput;

@@ -12,18 +12,6 @@ namespace DisplayInterfaces
         bool QuadDisplay { get; set; }
 
         /*
-         * These properties are for back-compatibility with SIMPL+,
-         * and are required because SIMPL+ does not support 
-         * bool or enum types. Make sure these properties
-         * return the equivalent value as the bool/enum
-         * versions.
-         */
-        ushort uPower { get; set; }
-        ushort uInput { get; set; }
-        ushort uSupportsQuad { get; }
-        ushort uQuadDisplay { get; set; }
-
-        /*
          * Events get triggered from "true feedback" from
          * the display. When a display sends a status update,
          * it should be parsed and the appropriate event should
