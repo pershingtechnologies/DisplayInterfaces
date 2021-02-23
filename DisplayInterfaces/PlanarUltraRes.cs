@@ -130,10 +130,6 @@ namespace DisplayInterfaces
         }
 
         //constructor
-        //public PlanarUltraRes()
-        //{
-        //    SupportsQuad = true;
-        //}
         public PlanarUltraRes(string ipAddress)
         {
             //this type of display does support quad-view
