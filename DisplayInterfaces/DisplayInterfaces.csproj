@@ -52,6 +52,7 @@
     <Compile Include="Event Arg Classes\PowerEventArgs.cs" />
     <Compile Include="PlanarUltraRes.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SamsungDisplay.cs" />
     <Compile Include="SIMPL+ Wrapper\eDisplayType.cs" />
     <Compile Include="SIMPL+ Wrapper\SimplDisplay.cs" />
   </ItemGroup>
